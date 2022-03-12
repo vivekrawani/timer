@@ -1,7 +1,7 @@
-const daysEl = document.getElementById("days");
-const hoursEl = document.getElementById("hours");
-const minsEl = document.getElementById("mins");
-const secondsEl = document.getElementById("seconds");
+const daysElement = document.getElementById("days");
+const hoursElement = document.getElementById("hours");
+const minsElement = document.getElementById("mins");
+const secondsElement = document.getElementById("seconds");
 let eventDate;
 document.querySelector("button").addEventListener("click", function() {
      eventDate = document.getElementById("date").value;
@@ -12,12 +12,6 @@ document.querySelector("button").addEventListener("click", function() {
      document.getElementById("event-name").style.marginTop = "-60px";
 
     });
-
-
-
-
-const newYears = "2022-03-15";
-
 
 function countdown() {
     const newYearsDate = new Date(eventDate);
@@ -30,10 +24,10 @@ function countdown() {
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    daysEl.innerHTML = days;
-    hoursEl.innerHTML = formatTime(hours);
-    minsEl.innerHTML = formatTime(mins);
-    secondsEl.innerHTML = formatTime(seconds);
+    daysElement.innerHTML = days;
+    hoursElement.innerHTML = formatTime(hours);
+    minsElement.innerHTML = formatTime(mins);
+    secondsElement.innerHTML = formatTime(seconds);
 }
 
 function formatTime(time) {
